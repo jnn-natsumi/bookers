@@ -1,5 +1,7 @@
 <h1>index page</h1>
     <% @list.each do |list| %>
         <h3>title</h3>
-        <span><%= list.title %></span>
+        <span>
+        <%= link_to  list.title, todolist_path(list.id) %>
+        </span>
     <% end %>
